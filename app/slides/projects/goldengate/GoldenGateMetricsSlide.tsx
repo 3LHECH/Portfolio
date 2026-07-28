@@ -14,7 +14,7 @@ export default function GoldenGateMetricsSlide() {
 
                 {/* Left Side: Impact & Architecture Bullet Points (5 Columns) */}
                 <div className="lg:col-span-5 space-y-6">
-                    <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest">// Business & Technical Impact</div>
+                    <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Business & Technical Impact</div>
 
                     <ul className="space-y-5 text-base md:text-lg font-light text-zinc-300 leading-relaxed">
                         <li className="flex items-start gap-3">
@@ -38,7 +38,7 @@ export default function GoldenGateMetricsSlide() {
 
                 {/* Right Side: Enhanced Benchmark Table (7 Columns) */}
                 <div className="lg:col-span-7 space-y-4 w-full">
-                    <div className="text-xs font-mono text-emerald-400 uppercase tracking-widest">// Statistical Performance Metrics</div>
+                    <div className="text-xs font-mono text-emerald-400 uppercase tracking-widest">Statistical Performance Metrics</div>
 
                     <div className="overflow-x-auto border border-zinc-800 bg-zinc-950 rounded-xl shadow-xl">
                         <table className="w-full text-left border-collapse text-xs md:text-sm">

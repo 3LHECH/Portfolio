@@ -38,7 +38,13 @@ export default function CytekiaDetailsSlide() {
                     </ul>
                 </div>
 
-
+                <div className="w-full lg:col-span-5 relative aspect-[4/3] overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-xl flex items-center justify-center">
+                    <img
+                        src="/cytekia/etl.webp"
+                        alt="Fullstack architecture flow chart mapping the React client interacting with Django REST views protected by RBAC middleware, flanked by scraper systems and transaction ledgers"
+                        className="h-full w-full object-contain p-4"
+                    />
+                </div>
             </div>
 
         </div>

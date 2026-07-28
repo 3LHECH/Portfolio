@@ -41,7 +41,7 @@ export default function SmartTransferDetailsSlide() {
                 {/* Right Side: Architecture Graphic Placeholder */}
                 <div className="w-full lg:col-span-5 relative aspect-[4/3] overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-xl flex items-center justify-center">
                     <img
-                        src="/football_project/tactical_matrix.webp"
+                        src="/smart_transfer/smart.webp"
                         alt="Bipartite graph visualization displaying player nodes assigning to pitch positions using the Hungarian allocation matrix"
                         className="h-full w-full object-contain p-4"
                     />

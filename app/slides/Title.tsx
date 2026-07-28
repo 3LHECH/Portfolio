@@ -3,12 +3,13 @@ import React from 'react';
 export interface TitleProps {
     title: string;
     subtitle: string;
+    subtitle2?: string;
     slideNumber?: string;
 }
 
-export default function Title({ title, subtitle, slideNumber }: TitleProps) {
+export default function Title({ title, subtitle, slideNumber, subtitle2 }: TitleProps) {
     return (
-        <div className="relative w-full min-h-[85vh] flex flex-col items-center justify-between  text-center select-none font-sans text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-hidden">
+        <div className="relative w-full min-h-[85vh] flex flex-col items-center justify-between text-center select-none font-sans text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-hidden">
 
             {/* Structural Tech Grid Background Overlay */}
             <div className="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.02] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:32px_32px]" />
@@ -22,7 +23,7 @@ export default function Title({ title, subtitle, slideNumber }: TitleProps) {
                 {/* Slide Number / Label Flag */}
                 {slideNumber && (
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md font-mono text-xs font-bold tracking-widest uppercase text-blue-600 dark:text-blue-400 bg-blue-50/60 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/40 opacity-80 backdrop-blur-sm">
-                        Section // {slideNumber}
+                        Section {slideNumber}
                     </div>
                 )}
 
@@ -35,7 +36,8 @@ export default function Title({ title, subtitle, slideNumber }: TitleProps) {
                     {/* Liquid Hollow Outlined Responsive Typography Layer */}
                     <div className="w-full max-w-4xl px-4 overflow-visible">
                         <svg
-                            viewBox="0 0 1000 120"
+                            /* Dynamically expands the viewBox height if subtitle2 exists */
+                            viewBox={subtitle2 ? "0 0 1000 230" : "0 0 1000 120"}
                             className="w-full h-auto font-black tracking-tighter uppercase select-none overflow-visible"
                         >
                             <text
@@ -44,15 +46,33 @@ export default function Title({ title, subtitle, slideNumber }: TitleProps) {
                                 textAnchor="middle"
                                 fill="none"
                                 stroke="#0072EF"
-                                strokeWidth="2.5"
-                                className="text-7xl sm:text-8xl md:text-[7rem]"
+                                strokeWidth="3"
                                 style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
-                                    letterSpacing: '-0.04em'
+                                    letterSpacing: '-0.04em',
+                                    fontSize: '95px' // Explicit coordinate font size for seamless SVG scaling
                                 }}
                             >
                                 {subtitle}
                             </text>
+
+                            {subtitle2 && (
+                                <text
+                                    x="50%"
+                                    y="200"
+                                    textAnchor="middle"
+                                    fill="none"
+                                    stroke="#0072EF"
+                                    strokeWidth="3"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+                                        letterSpacing: '-0.04em',
+                                        fontSize: '95px'
+                                    }}
+                                >
+                                    {subtitle2}
+                                </text>
+                            )}
                         </svg>
                     </div>
                 </div>

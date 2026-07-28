@@ -28,6 +28,9 @@ import TravelAppTitleSlide from '../slides/university_projects/travel_gency/Guid
 import TravelAppDetailsSlide from '../slides/university_projects/travel_gency/GuideMeDetailsSlide';
 import ContactSlide from '../slides/Contact';
 import StackSlide from '../slides/SkillsSlide';
+import GuestLogisticsProblemSlide from '../slides/projects/wize_ailien_guest/GuestLogisticProblemSlide';
+import WizeAilienDevOpsProblemSlide from '../slides/projects/wize_ailien_devops/WizeAilienDevOpsProblemSlide';
+import SpotlightProblemSlide from '../slides/projects/spotlight/SpotlightProblemSlide';
 
 const SLIDES = [
   { id: 'intro', title: '', component: IntroSlide },
@@ -39,7 +42,8 @@ const SLIDES = [
       <Title
         slideNumber="01"
         title="Who Is"
-        subtitle="Mohamed Hechmi Ben Hadid"
+        subtitle="Mohamed Hechmi"
+        subtitle2="Ben Hadid"
       />
     )
   },
@@ -72,12 +76,15 @@ const SLIDES = [
   { id: 'goldengate-problem', title: '', component: GoldenGateProblemSlide },
   { id: 'goldengate-metrics', title: '', component: GoldenGateMetricsSlide },
   { id: 'guestLogisticsTitleSlide', title: '', component: GuestLogisticsTitleSlide },
+  { id: 'guestLogisticsProblemSlide', title: '', component: GuestLogisticsProblemSlide },
   { id: 'guestLogisticsDetailsSlide', title: '', component: GuestLogisticsDetailsSlide },
   { id: 'WizeAilienDevOpsTitleSlide', title: '', component: WizeAilienDevOpsTitleSlide },
+  { id: 'WizeAilienDevOpsProblemSlide', title: '', component: WizeAilienDevOpsProblemSlide },
   { id: 'WizeAilienDevOpsDetailsSlide', title: '', component: WizeAilienDevOpsDetailsSlide },
   { id: 'CytekiaTitleSlide', title: '', component: CytekiaTitleSlide },
   { id: 'CytekiaDetailsSlide', title: '', component: CytekiaDetailsSlide },
   { id: 'SpotlightTitleSlide', title: '', component: SpotlightTitleSlide },
+  { id: 'SpotlightProblemSlide', title: '', component: SpotlightProblemSlide },
   { id: 'SpotlightDetailsSlide', title: '', component: SpotlightDetailsSlide },
   {
     id: '04',
@@ -101,7 +108,7 @@ const SLIDES = [
       <Title
         slideNumber="05"
         title="Skills"
-        subtitle="Tools With Simple Knowledge"
+        subtitle="Tools I Used"
       />
     )
   },
@@ -123,7 +130,6 @@ const SLIDES = [
 export default function PresentationSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
   // Touch Tracking State variables for fluid swiping
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -140,17 +146,12 @@ export default function PresentationSlider() {
     if (currentSlide > 0) setCurrentSlide(prev => prev - 1);
   };
 
-  // Synchronize global document classes for portals/modals
+  // Enforce dark class globally on layout mount
   useEffect(() => {
     const root = window.document.documentElement;
-    if (theme === 'light') {
-      root.classList.remove('dark');
-      root.classList.add('light');
-    } else {
-      root.classList.remove('light');
-      root.classList.add('dark');
-    }
-  }, [theme]);
+    root.classList.remove('light');
+    root.classList.add('dark');
+  }, []);
 
   // Handle standard desktop key events
   useEffect(() => {
@@ -192,16 +193,11 @@ export default function PresentationSlider() {
     }
   };
 
-  const isLight = theme === 'light';
-  const containerBg = isLight ? 'bg-white' : 'bg-zinc-950';
-  const containerText = isLight ? 'text-zinc-900' : 'text-white';
-
   return (
-    <div className={`relative w-screen h-[100dvh] overflow-hidden transition-colors duration-500 ${containerBg} ${containerText}`}>
+    <div className="relative w-screen h-[100dvh] overflow-hidden bg-zinc-950 text-white">
 
       {/* Top Floating Navbar */}
       <NavigationBar
-        theme={theme}
         onOpenContact={() => setIsModalOpen(true)}
       />
 
@@ -222,23 +218,18 @@ export default function PresentationSlider() {
           return (
             <div
               key={slide.id}
-              /* 
-                FIX: Replaced top-0 with fixed absolute dimension mapping.
-                Ensuring overflow-y-auto combined with max-h calculation lets the card 
-                scroll naturally on mobile views while keeping the fixed parent background stable.
-              */
               className={`absolute inset-0 w-full h-full overflow-y-auto scrollbar-thin transition-transform duration-500 ease-in-out ${transformClass}`}
               style={{ zIndex: index === currentSlide ? 10 : 0 }}
             >
               {/* Inner container with background image */}
               <div
-                className={`w-full min-h-full flex flex-col justify-center items-center  transition-colors duration-500 ${containerBg} relative`}
+                className="w-full min-h-full flex flex-col justify-center items-center bg-zinc-950 relative"
                 style={{
                   backgroundImage: "url('esprit_mile_back.jpg')",
                   backgroundRepeat: 'no-repeat',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  backgroundAttachment: 'scroll' // Prevents mobile graphic viewport lag
+                  backgroundAttachment: 'scroll'
                 }}
               >
                 {/* Background Tint Overlay */}
@@ -258,7 +249,6 @@ export default function PresentationSlider() {
       <BottomDock
         slides={SLIDES}
         currentSlide={currentSlide}
-        theme={theme}
         onSelectSlide={setCurrentSlide}
       />
 

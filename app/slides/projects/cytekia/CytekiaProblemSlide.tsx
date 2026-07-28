@@ -1,6 +1,6 @@
 'use client';
 
-export default function GoldenGateProblemSlide() {
+export default function CytekiaProblemSlide() {
     return (
         <div className="w-full max-w-5xl px-6 py-12 text-zinc-100">
 

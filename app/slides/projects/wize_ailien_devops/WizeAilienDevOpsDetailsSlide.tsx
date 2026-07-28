@@ -48,6 +48,15 @@ export default function WizeAilienDevOpsDetailsSlide() {
                     </ul>
                 </div>
 
+                {/* Right Side: Mock Asset Showcase Graphic placeholder */}
+                <div className="w-full lg:col-span-5 relative aspect-[4/3] overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-xl">
+                    <img
+                        src="/wize_ailien/products.webp"
+                        alt="Visual overview of the Guest Logistics architecture map showing Celery workers executing email tasks"
+                        className="h-full w-full object-contain p-4"
+                    />
+                </div>
+
 
             </div>
 

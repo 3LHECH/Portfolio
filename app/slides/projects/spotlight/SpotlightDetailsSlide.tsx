@@ -8,7 +8,7 @@ export default function SpotlightDetailsSlide() {
             <div className="mb-12 border-l-2 border-emerald-500 pl-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
                     <span className="text-sm font-mono text-emerald-400 uppercase tracking-wider">Product Architecture & Security</span>
-                    <h2 className="mt-1 text-2xl font-black tracking-tight text-white uppercase">Platform Engineering & System Blocks</h2>
+                    <h2 className="mt-1 text-2xl font-black tracking-tight text-white uppercase">Platform Engineering </h2>
                 </div>
             </div>
 
@@ -16,7 +16,7 @@ export default function SpotlightDetailsSlide() {
 
                 {/* Left Side: System Details */}
                 <div className="lg:col-span-7">
-                    <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-4">// System Engineering Impact</div>
+                    <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-4">System Engineering Impact</div>
                     <ul className="space-y-5 text-base md:text-lg font-light text-zinc-300 leading-relaxed">
                         <li className="flex items-start gap-4">
                             <span className="text-emerald-500 mt-2 text-sm shrink-0">◆</span>
@@ -33,7 +33,7 @@ export default function SpotlightDetailsSlide() {
                         <li className="flex items-start gap-4">
                             <span className="text-emerald-500 mt-2 text-sm shrink-0">◆</span>
                             <span>
-                                <strong className="text-white font-semibold">Data Harvest & Transaction Engines:</strong> Authored background web-scraping pipelines to assemble structured academic material alongside transactional payment processors for seamless platform monetization.
+                                <strong className="text-white font-semibold">Data Scraping Engine:</strong> Web scraping system that aggregates data from numerous sources, including PubMed, ResearchGate, and Google Scholar, to build an enriched and unified academic database.
                             </span>
                         </li>
                     </ul>
@@ -42,7 +42,7 @@ export default function SpotlightDetailsSlide() {
                 {/* Right Side: Architecture Graphic Placeholder */}
                 <div className="w-full lg:col-span-5 relative aspect-[4/3] overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-xl flex items-center justify-center">
                     <img
-                        src="/spotlight/platform_architecture.webp"
+                        src="/spotlight/spotlight.webp"
                         alt="Fullstack architecture flow chart mapping the React client interacting with Django REST views protected by RBAC middleware, flanked by scraper systems and transaction ledgers"
                         className="h-full w-full object-contain p-4"
                     />
