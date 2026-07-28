@@ -9,10 +9,10 @@ export interface TitleProps {
 
 export default function Title({ title, subtitle, slideNumber, subtitle2 }: TitleProps) {
     return (
-        <div className="relative w-full min-h-[85vh] flex flex-col items-center justify-between text-center select-none font-sans text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-hidden">
+        <div className="relative w-full min-h-[85vh] flex flex-col items-center justify-between text-center select-none font-sans text-zinc-100 overflow-hidden">
 
             {/* Structural Tech Grid Background Overlay */}
-            <div className="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.02] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:32px_32px]" />
+            <div className="absolute inset-0 z-0 opacity-[0.02] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:32px_32px]" />
 
             {/* Top Section Anchor: Reserved for spacing/breadcrumbs */}
             <div className="h-6 z-10" />
@@ -22,14 +22,14 @@ export default function Title({ title, subtitle, slideNumber, subtitle2 }: Title
 
                 {/* Slide Number / Label Flag */}
                 {slideNumber && (
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md font-mono text-xs font-bold tracking-widest uppercase text-blue-600 dark:text-blue-400 bg-blue-50/60 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/40 opacity-80 backdrop-blur-sm">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md font-mono text-xs font-bold tracking-widest uppercase text-blue-400 bg-blue-950/30 border border-blue-900/40 opacity-80 backdrop-blur-sm">
                         Section {slideNumber}
                     </div>
                 )}
 
                 {/* Massive Dynamic Scale Typography */}
                 <div className="w-full flex flex-col items-center space-y-2">
-                    <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase leading-[0.95] text-slate-900 dark:text-white">
+                    <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase leading-[0.95] text-white">
                         {title}
                     </h1>
 
@@ -82,14 +82,14 @@ export default function Title({ title, subtitle, slideNumber, subtitle2 }: Title
             </div>
 
             {/* Floating Interactive Deck Navigation Hint */}
-            <div className="relative z-10 flex flex-col items-center gap-3 border-t border-slate-200/60 dark:border-slate-800/80 pt-6 w-full max-w-sm text-slate-400 dark:text-slate-500 font-mono text-[10px] tracking-widest uppercase">
+            <div className="relative z-10 flex flex-col items-center gap-3 border-t border-zinc-800/80 pt-6 w-full max-w-sm text-zinc-500 font-mono text-[10px] tracking-widest uppercase">
                 <span className="flex flex-col sm:flex-row items-center gap-2">
                     <span>Keyboard Slide Controls</span>
                     <div className="flex items-center gap-1 font-sans normal-case tracking-normal">
-                        <kbd className="h-5 px-1.5 flex items-center bg-slate-100 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-200 rounded font-bold text-[10px] shadow-sm">
+                        <kbd className="h-5 px-1.5 flex items-center bg-zinc-900 border border-zinc-800 text-zinc-300 rounded font-bold text-[10px] shadow-sm">
                             &larr;
                         </kbd>
-                        <kbd className="h-5 px-1.5 flex items-center bg-slate-100 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-200 rounded font-bold text-[10px] shadow-sm">
+                        <kbd className="h-5 px-1.5 flex items-center bg-zinc-900 border border-zinc-800 text-zinc-300 rounded font-bold text-[10px] shadow-sm">
                             &rarr;
                         </kbd>
                     </div>
