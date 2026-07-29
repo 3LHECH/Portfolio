@@ -4,10 +4,7 @@ export default function IntroSlide() {
   return (
     <div className="w-full min-h-[80vh] flex flex-col items-center justify-between pt-24 md:p-24 py-12 px-6 text-center select-none text-zinc-100 font-sans">
 
-      {/* Top Slide Context Anchor */}
-      <div className="text-[10px] md:text-xs font-mono font-bold tracking-[0.3em] uppercase pt-24 text-[#0072EF]">
-        Section 01
-      </div>
+
 
       {/* Main Core Center Display Stack */}
       <div className="max-w-5xl mx-auto space-y-4 my-auto flex flex-col items-center justify-center w-full">
