@@ -225,7 +225,7 @@ export default function PresentationSlider() {
               <div
                 className="w-full min-h-full flex flex-col justify-center items-center bg-zinc-950 relative"
                 style={{
-                  backgroundImage: "url('esprit_mile_back.jpg')",
+                  backgroundImage: "url('esprit_mile_back.webp')",
                   backgroundRepeat: 'no-repeat',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
