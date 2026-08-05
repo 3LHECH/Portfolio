@@ -56,7 +56,8 @@ export default function SkillsSlide() {
             items: [
                 { name: "Machine Learning" }, { name: "Deep Learning" },
                 { name: "LLMs", }, { name: "RAG" },
-                { name: "Embeddings" }, { name: "Semantic Search" }
+                { name: "Embeddings" }, { name: "Semantic Search" }, { name: "Generative Ai" }
+                
             ],
             icon: (
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
