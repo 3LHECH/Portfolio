@@ -4,8 +4,6 @@ export default function IntroSlide() {
   return (
     <div className="w-full min-h-[80vh] flex flex-col items-center justify-between pt-24 md:p-24 py-12 px-6 text-center select-none text-zinc-100 font-sans">
 
-
-
       {/* Main Core Center Display Stack */}
       <div className="max-w-5xl mx-auto space-y-4 my-auto flex flex-col items-center justify-center w-full">
 
@@ -40,6 +38,32 @@ export default function IntroSlide() {
           AI &amp; Infrastructure Engineer specializing in predictive engines,
           cloud-native platforms, and distributed systems architecture.
         </p>
+
+        {/* Download CV Action Button */}
+        <div className="pt-6">
+          <a
+            href="/cv/mohamed hechmi ben hadid_cv.pdf"
+            download="mohamed_hechmi_ben_hadid_cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-100 font-medium text-sm transition-all duration-200 hover:bg-zinc-800 hover:border-[#0072EF] hover:text-white shadow-lg group focus:outline-none focus:ring-2 focus:ring-[#0072EF]/50"
+          >
+            <svg
+              className="w-4 h-4 text-[#0072EF] transition-transform duration-200 group-hover:translate-y-0.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
+            Download CV
+          </a>
+        </div>
       </div>
 
       {/* Floating Interactive Deck Navigation Hint */}
